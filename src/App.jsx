@@ -21,7 +21,6 @@ export default function AppNew() {
   const [isLoading, setIsLoading] = useState(false);
   const [fetchCountryError, setFetchCountryError] = useState(false);
   const [fetchStateError, setFetchStateError] = useState(false);
-  const [fetchWeatherError, setFetchWeatherError] = useState(false);
 
   function LightModeDarkMode() {
     if (backgroundColor === "light") {
@@ -91,7 +90,7 @@ export default function AppNew() {
       setWeatherData(weatherData);
       setIsLoading(false);
     } catch (error) {
-      setFetchWeatherError(true);
+      console.error("Unable the fetch api");
     }
   }
   useEffect(() => {
